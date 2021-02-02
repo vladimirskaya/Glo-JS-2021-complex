@@ -1,3 +1,4 @@
+
 let num = 266219;
 let multi = 1;
 let lang, arr, namePerson;
@@ -50,3 +51,21 @@ lang == arr[0][0] ? console.log(arr[0][1]) :
 namePerson = prompt("Введите имя: ");
 (namePerson=='Артем') ? console.log('директор') : 
     (namePerson=='Максим') ? console.log('преподаватель') : console.log('студент');
+
+
+
+    //  Lesson 04
+let shortyFunction = function(str) {
+    if (typeof(str) !== 'string') {
+        return("В качестве аргумента передана не строка.")
+    }
+    if (str.length < 30) {
+        return str.trim()
+    } else {
+        return str.trim().slice(30) + "..."
+    }
+}
+
+/*example = "        jdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd        "
+console.log(typeof example);
+console.log(shortyFunction(example));*/
