@@ -1,6 +1,6 @@
 let num = 266219;
 let multi = 1;
-let lang, arr;
+let lang, arr, namePerson;
 
 arr = (String(num)).split('');
 for (let i=0; i<arr.length; i++) {
@@ -13,7 +13,7 @@ console.log("Первые две цифры - ", String(multi ** 3).slice(0,2));
 
 
 // Lesson 03. Date 2021-02-02
-
+//Part 1
 lang = prompt("Введите ru или en"); // переменная принимает только два значения: en / ru
 
 // by if
@@ -45,3 +45,8 @@ arr = [ ['ru', 'Понедельник, Вторник, Среда, Четвер
         ['en', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']];
 lang == arr[0][0] ? console.log(arr[0][1]) : 
     lang == arr[1][0] ? console.log(arr[1][1]) : console.log("Введено недопустимое значение");
+
+// Part 2
+namePerson = prompt("Введите имя: ");
+(namePerson=='Артем') ? console.log('директор') : 
+    (namePerson=='Максим') ? console.log('преподаватель') : console.log('студент');
