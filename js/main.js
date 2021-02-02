@@ -18,26 +18,30 @@ lang = prompt("Введите ru или en"); // переменная прини
 
 // by if
 if (lang == "ru") {
-    console.log("1Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье");
+    console.log("Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье");
     } else if (lang == "en"){
-    console.log("1Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
+    console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
     } else {
         console.log("Введено недопустимое значение")
     }
+
 // by switch
 switch(lang) {
     case "ru":
-        console.log("2Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье");
+        console.log("Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье");
         break;
     case "en":
-        console.log("2Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
+        console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
         break;
     default:
         console.log("Введено недопустимое значение");
     }
+
 // by array
-// для  куратора: какой глубины массив - не уточняется, поэтому пошла по меньшему сопротивлению
-arr = [ ['ru', '3Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
-        ['en', '3Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']];
+/* для  куратора: какой глубины массив - не уточняется, поэтому пошла по меньшему сопротивлению, но
+если по условию каждый день недели является отдельным элементом, то, думаю, что вместо console.log
+можно вызвать функцию вывода элементов массива. */
+arr = [ ['ru', 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
+        ['en', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']];
 lang == arr[0][0] ? console.log(arr[0][1]) : 
     lang == arr[1][0] ? console.log(arr[1][1]) : console.log("Введено недопустимое значение");
