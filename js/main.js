@@ -17,9 +17,9 @@ console.log("Первые две цифры - ", String(multi ** 3).slice(0,2));
 lang = prompt("Введите ru или en"); // переменная принимает только два значения: en / ru
 
 // by if
-if (lang == "ru") {
+if (lang === "ru") {
     console.log("Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье");
-    } else if (lang == "en"){
+    } else if (lang === "en"){
     console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
     } else {
         console.log("Введено недопустимое значение")
@@ -43,10 +43,10 @@ switch(lang) {
 можно вызвать функцию вывода элементов массива. */
 arr = [ ['ru', 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
         ['en', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']];
-lang == arr[0][0] ? console.log(arr[0][1]) : 
-    lang == arr[1][0] ? console.log(arr[1][1]) : console.log("Введено недопустимое значение");
+lang === arr[0][0] ? console.log(arr[0][1]) : 
+    lang === arr[1][0] ? console.log(arr[1][1]) : console.log("Введено недопустимое значение");
 
 // Part 2
 namePerson = prompt("Введите имя: ");
-(namePerson=='Артем') ? console.log('директор') : 
-    (namePerson=='Максим') ? console.log('преподаватель') : console.log('студент');
+(namePerson === 'Артем') ? console.log('директор') : 
+    (namePerson === 'Максим') ? console.log('преподаватель') : console.log('студент');
