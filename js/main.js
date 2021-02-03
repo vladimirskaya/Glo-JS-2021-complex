@@ -56,7 +56,7 @@ namePerson = prompt("Введите имя: ");
 */
 
     //  Lesson 04
-let shortyFunction = function(str) {
+/*let shortyFunction = function(str) {
     if (typeof(str) !== 'string') {
         return("В качестве аргумента передана не строка.")
     } else {
@@ -66,13 +66,24 @@ let shortyFunction = function(str) {
             return(str.trim().slice(0,30) + '...');
         }
     }
-}
+}*/
 
-let example = ["It is a long established fact that a reader will be дayout. ",
+/*let example = ["It is a long established fact that a reader will be дayout. ",
                 "                        ook like readable English. Many",
                 "default model text,               'lorem ipsum' will uncove",
                 "       many web sites      "]
 for (let i = 0; i <example.length; i++) {
     console.log(shortyFunction(example[i]));
 }
-//console.log(example, example.length, typeof (example));
+//console.log(example, example.length, typeof (example));*/
+
+
+//          Lesson 05
+let arr = ['1234', '23345', '456732', '343443', '2222', '87878', '676767'];
+for (let value of arr) {
+    if (value[0] == 2 || value[0] == 4) {
+        console.log(value);
+    }
+}
+
+//Вывести простые числа
