@@ -1,5 +1,6 @@
+'use strict';
 
-let num = 266219;
+/*let num = 266219;
 let multi = 1;
 let lang, arr, namePerson;
 
@@ -42,7 +43,7 @@ switch(lang) {
 /* для  куратора: какой глубины массив - не уточняется, поэтому пошла по меньшему сопротивлению, но
 если по условию каждый день недели является отдельным элементом, то, думаю, что вместо console.log
 можно вызвать функцию вывода элементов массива. */
-arr = [ ['ru', 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
+/*arr = [ ['ru', 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье'],
         ['en', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']];
 lang == arr[0][0] ? console.log(arr[0][1]) : 
     lang == arr[1][0] ? console.log(arr[1][1]) : console.log("Введено недопустимое значение");
@@ -52,20 +53,26 @@ namePerson = prompt("Введите имя: ");
 (namePerson=='Артем') ? console.log('директор') : 
     (namePerson=='Максим') ? console.log('преподаватель') : console.log('студент');
 
-
+*/
 
     //  Lesson 04
 let shortyFunction = function(str) {
     if (typeof(str) !== 'string') {
         return("В качестве аргумента передана не строка.")
-    }
-    if (str.length < 30) {
-        return str.trim()
     } else {
-        return str.trim().slice(30) + "..."
+        if (str.length < 30){
+            return(str.trim());
+        } else {
+            return(str.trim().slice(0,30) + '...');
+        }
     }
 }
 
-/*example = "        jdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd        "
-console.log(typeof example);
-console.log(shortyFunction(example));*/
+let example = ["It is a long established fact that a reader will be дayout. ",
+                "                        ook like readable English. Many",
+                "default model text,               'lorem ipsum' will uncove",
+                "       many web sites      "]
+for (let i = 0; i <example.length; i++) {
+    console.log(shortyFunction(example[i]));
+}
+//console.log(example, example.length, typeof (example));
