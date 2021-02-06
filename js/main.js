@@ -91,8 +91,23 @@ for (let value of arr) {
 for (let i = 0; i < 101; i++) {
     if (((i === 1) || (i === 2) || (i === 3) || (i === 5) || (i === 7)) || 
             ((i % 2 !== 0) && (i % 3 !== 0) && (i % 5 !== 0) && (i % 7 !==0))) {
-        console.log(i);
+        console.log(`Простое число ${i}. Делители этого числа: 1 и ${i}.`);
     }
 }
 
 //Второй способ
+let amount;
+for (let i = 2; i < 101; i++){
+    amount = 0;
+    //console.log(i);
+    for (let j = 1; j < i; j++) {
+        //console.log("j = ", j); }
+        if (i % j === 0) {
+            amount += 1;
+            //console.log(`${i} % ${j}  --- amount = ${amount}`);
+        }
+    } 
+    if (amount === 1) {
+        console.log(`Простое число ${i}. Делители этого числа: 1 и ${i}.`);
+    }
+}
