@@ -79,7 +79,7 @@ for (let i = 0; i <example.length; i++) {
 
 
 //          Lesson 05
-let arr = ['1234', '23345', '456732', '343443', '2222', '87878', '676767'];
+/*let arr = ['1234', '23345', '456732', '343443', '2222', '87878', '676767'];
 for (let value of arr) {
     if (value[0] == 2 || value[0] == 4) {
         console.log(value);
@@ -96,3 +96,36 @@ for (let i = 0; i < 101; i++) {
 }
 
 //Второй способ
+let amount;
+for (let i = 2; i < 101; i++){
+    amount = 0;
+    //console.log(i);
+    for (let j = 1; j < i; j++) {
+        //console.log("j = ", j); }
+        if (i % j === 0) {
+            amount += 1;
+            //console.log(`${i} % ${j}  --- amount = ${amount}`);
+        }
+    } 
+    if (amount === 1) {
+        console.log(i);
+    }
+}*/
+
+// Lesson 07
+let week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ],
+	date = new Date();
+    //document.write(date.getDate() + "<br>");
+for (let i = 0; i < week.length; i++) {
+	if (date.getDate() - 1 === i) {
+		if (i === 5 || i ===6) {
+			document.write( "<b><i>" + week[i] + "</i></b><br>" );
+		} else {
+			document.write( "<b>" + week[i] + "</b><br>" );
+		}
+	} else if (i === 5 || i ===6) {
+		document.write( "<i>" + week[i] + "</i><br>" );
+	} else {
+		document.write( "" + week[i] + "<br>" );
+	}
+}	
